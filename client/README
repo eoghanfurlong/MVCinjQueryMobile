@@ -1,0 +1,19 @@
+Feedhenry APP based on jQuery Mobile Library in MVC Pattern
+
+The final app contains following content:
+* List View
+* Google Maps
+* Camera
+* Twitter
+* Mash & Hash & Cache
+* Webview
+
+Steps:
+1. Project Structure
+2. Home View & Controller
+3. List View & Controller & Model
+4. Google Maps View & Controller
+5. Camera View & Controller
+6. Twitter View & Controller & Model
+7. Mash & Hash & Cache View & Controller & Model
+8. Webview View
