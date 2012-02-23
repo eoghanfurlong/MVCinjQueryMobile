@@ -5,11 +5,6 @@ var mapController = {
 		var that = this;
 		if($("#mapCanvas").children().length == 0) {
 			$("#mapCanvas").height($(window).height() - $(".header").height());
-			var myOptions = {
-				center : new google.maps.LatLng(-34.397, 150.644),
-				zoom : 11,
-				mapTypeId : google.maps.MapTypeId.ROADMAP
-			};
 			$fh.map({
 				target : '#mapCanvas',
 				lat : -34.397,
