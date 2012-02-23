@@ -7,35 +7,35 @@ var mapModel = {
 			key : 'points'
 		}, function(res) {
 			if(res.val === null) {// No client data found
-				callback(null);
+				that.data={};
+				that.data.hash="";
 			} else {
-				// Parse the cached data
 				var cache = JSON.parse(res.val);
 				that.data = cache;
-				var hash = that.data.hash;
-				$fh.act({
-					act : 'getPoints',
-					req : {
-						hash : hash,
-						timestamp : new Date().getTime()
-					}
-				}, function(res) {
-					that.data=res;
-					if(hash && hash === res.hash) {
-						console.log("Client data is at the latest version");
-					} else {
-						$fh.data({
-							act : 'save',
-							key : 'points',
-							val : JSON.stringify(res)
-						});
-
-					}
-					if(callback) {
-						callback(that.data);
-					}
-				});
 			}
+			var hash = that.data.hash;
+			$fh.act({
+				act : 'getPoints',
+				req : {
+					hash : hash,
+					timestamp : new Date().getTime()
+				}
+			}, function(res) {
+				that.data = res;
+				if(hash && hash === res.hash) {
+					console.log("Client data is at the latest version");
+				} else {
+					$fh.data({
+						act : 'save',
+						key : 'points',
+						val : JSON.stringify(res)
+					});
+
+				}
+				if(callback) {
+					callback(that.data);
+				}
+			});
 		});
 	}
 }
