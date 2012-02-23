@@ -1,9 +1,7 @@
 var nav = {
 	map : function() {
 		changeView("googleMap");
-		setTimeout(function(){
-			mapController.renderMap();
-		},800);
+		mapController.renderMap();
 	},
 	twitter : function() {
 		$.mobile.showPageLoadingMsg()

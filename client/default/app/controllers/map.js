@@ -2,7 +2,7 @@ var mapController = {
 	markers : [], // Keep track of any map markers
 	map : null,
 	renderMap : function() {
-		var that=this;
+		var that = this;
 		if($("#mapCanvas").children().length == 0) {
 			$("#mapCanvas").height($(window).height() - $(".header").height());
 			var myOptions = {
@@ -11,21 +11,22 @@ var mapController = {
 				mapTypeId : google.maps.MapTypeId.ROADMAP
 			};
 			this.map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
-			var map=this.map;
-			this.getLocation();
-			mapModel.loadPoints(function(res) {
-				for(var i = 0; i < res.data.locations.length; i++) {
-					var point = res.data.locations[i];
-					var pos = new google.maps.LatLng(point.lat, point.lon);
-					that.markers.push(new google.maps.Marker({
-						position : pos,
-						map : map,
-						icon : 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + (i + 1) + '|FF0000|000000'
-					}));
-				}
+			var map = this.map;
+			setTimeout(function() {
+				that.getLocation();
+				mapModel.loadPoints(function(res) {
+					for(var i = 0; i < res.data.locations.length; i++) {
+						var point = res.data.locations[i];
+						var pos = new google.maps.LatLng(point.lat, point.lon);
+						that.markers.push(new google.maps.Marker({
+							position : pos,
+							map : map,
+							icon : 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + (i + 1) + '|FF0000|000000'
+						}));
+					}
 
-			});
-			
+				});
+			},800);
 		}
 	},
 	/*
@@ -35,7 +36,7 @@ var mapController = {
 		// Instance of the google map
 		var map = this.map;
 		var pos = {};
-		var that=this;
+		var that = this;
 		$fh.geo({
 			interval : 0
 		}, function(res) {
