@@ -16,7 +16,7 @@ var settingsController={
 			$.mobile.hidePageLoadingMsg();
 			var title=data.title;
 			var name=data.fullname;
-			var toggle=data.toogle;
+			var toggle=data.toggle;
 			var slider=data.slider;
 			if (undefined == title || undefined==name || undefined ==toggle || undefined == slider){
 				return;
