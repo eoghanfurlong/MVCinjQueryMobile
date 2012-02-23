@@ -40,7 +40,7 @@ var nav = {
 				// Change the view
 				changeView("camera");
 				// Update the view
-				$("#camera .content img").attr("src") = pathToImage;
+				$("#camera .content img").attr("src", pathToImage);
 			}
 		});
 	},
