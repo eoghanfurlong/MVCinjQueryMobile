@@ -1,15 +1,7 @@
 var nav = {
 	map : function() {
 		changeView("googleMap");
-		if($("#mapCanvas").children().length == 0) {
-			$("#mapCanvas").height($(window).height() - $(".header").height());
-			var myOptions = {
-				center : new google.maps.LatLng(-34.397, 150.644),
-				zoom : 8,
-				mapTypeId : google.maps.MapTypeId.ROADMAP
-			};
-			var map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
-		}
+		mapController.renderMap();
 	},
 	twitter : function() {
 		$.mobile.showPageLoadingMsg()
