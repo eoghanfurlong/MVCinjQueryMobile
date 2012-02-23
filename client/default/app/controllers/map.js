@@ -10,23 +10,35 @@ var mapController = {
 				zoom : 11,
 				mapTypeId : google.maps.MapTypeId.ROADMAP
 			};
-			this.map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
-			var map = this.map;
-			setTimeout(function() {
-				that.getLocation();
-				mapModel.loadPoints(function(res) {
-					for(var i = 0; i < res.data.locations.length; i++) {
-						var point = res.data.locations[i];
-						var pos = new google.maps.LatLng(point.lat, point.lon);
-						that.markers.push(new google.maps.Marker({
-							position : pos,
-							map : map,
-							icon : 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + (i + 1) + '|FF0000|000000'
-						}));
-					}
+			$fh.map({
+				target : '#mapCanvas',
+				lat : -34.397,
+				lon : 150.644,
+				zoom : 11
+			}, function(map) {
+				that.map=map.map;
+				var map = that.map;
+				setTimeout(function() {
+					that.getLocation();
+					mapModel.loadPoints(function(res) {
+						for(var i = 0; i < res.data.locations.length; i++) {
+							var point = res.data.locations[i];
+							var pos = new google.maps.LatLng(point.lat, point.lon);
+							that.markers.push(new google.maps.Marker({
+								position : pos,
+								map : map,
+								icon : 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + (i + 1) + '|FF0000|000000'
+							}));
+						}
 
-				});
-			},800);
+					});
+				}, 800);
+
+			}, function(msg) {
+				console.log(msg);
+			});
+			
+			
 		}
 	},
 	/*
