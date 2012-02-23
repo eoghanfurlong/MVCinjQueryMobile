@@ -18,6 +18,9 @@ var settingsController={
 			var name=data.fullname;
 			var toggle=data.toogle;
 			var slider=data.slider;
+			if (undefined == title || undefined==name || undefined ==toggle || undefined == slider){
+				return;
+			}
 			//update view data
 			$("#title").val(title).selectmenu('refresh');
 			$("#name").val(name);

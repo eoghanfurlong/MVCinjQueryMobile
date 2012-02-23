@@ -59,7 +59,7 @@ var nav = {
 		});
 	},
 	settings : function() {
-
 		changeView("settings");
+		settingsController.loadSettings();
 	}
 }
