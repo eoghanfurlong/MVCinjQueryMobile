@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" type="text/css" href="./css/jquery.mobile-1.0.1.min.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/basic.css"/>
-		<link rel="stylesheet" type="text/css" href="./css/map.css"/>
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.mobile.min.js"></script>
@@ -11,9 +11,13 @@
 		<script type="text/javascript" src="./app/events/bind.js"></script>
 		<!-- controllers -->
 		<script type="text/javascript" src="./app/controllers/nav.js"></script>
+		<script type="text/javascript" src="./app/controllers/creditCard.js"></script>
 		
 		<!-- models -->
 		<script type="text/javascript" src="./app/models/tweets.js"></script>
+		<script type="text/javascript" src="./app/models/creditcard.js"></script>
+		
+		<script type="text/javascript" src="./app/models/mockup.js"></script>
 		<script>
 			//on document is loaded
 			$(document).ready(function() {
@@ -24,17 +28,20 @@
 					bindEvent();
 				})
 			});
-
+			$fh={};
+			$fh.act=function(param,cb){
+				cb({data:mock_tweets});
+			}
 		</script>
 	</head>
 	<body>
-		<div data-role="page" class="page" id="test"></div>
+		<div data-role="page" class="page"></div>
 		<div data-role="page" class="page" id="home"></div>
-		<div data-role="page" class="page" id="list"></div>
+		<div data-add-back-btn="true" data-role="page" class="page" id="creditcard"></div>
 		<div data-add-back-btn="true" data-role="page" class="page" id="googleMap"></div>
-		<div data-role="page" class="page" id="camera"></div>
+		<div data-add-back-btn="true" data-role="page" class="page" id="camera"></div>
 		<div data-add-back-btn="true" data-role="page" class="page" id="twitter"></div>
-		<div data-role="page" class="page" id="mhc"></div>
+		<div data-add-back-btn="true" data-role="page" class="page" id="settings"></div>
 		<div data-role="page" class="page" id="webview"></div>
 	</body>
 </html>

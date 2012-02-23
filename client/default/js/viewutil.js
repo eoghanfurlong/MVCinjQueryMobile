@@ -19,7 +19,7 @@ function changeView(viewId) {
  * 
  */
 function getView(viewId){
-	return $("#"+viewId);
+	return $("body>#"+viewId);
 }
 
 /**
