@@ -43,27 +43,5 @@ In the home.html file in the views directory, add the following code to the cont
 
 This will add the Google Maps and Twitter icons to the home screen.
 
-Next, create a file called googleMap.html in the views folder (client/default/app/views) and add the following code to create the Maps page:
-
-		<link rel="stylesheet"  type="text/css" href="./css/map.css"/>
-		<!-- Google Maps API -->
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-
-
-		<div  class="header" data-role="header">
-			<img src="./images/logo.png"/>
-		</div>
-		<div class="relative">
-		<div id="mapCanvas">
-			
-		</div>
-		</div>
-
-
-## Step 3
-Update the index.html page to add reference to the Google Maps page that we created.
-
-
-		<div data-add-back-btn="true" data-role="page" class="page" id="googleMap"></div>
 
 
