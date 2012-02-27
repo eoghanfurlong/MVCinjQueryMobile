@@ -11,7 +11,6 @@ In this tutorial we will be creating the basic structure of the app. At the end 
 Given the boilerplate code, we need to create a home page for the app. Create a home.html file in client/default/app/views
 and add the following code to it.
 
-		<link rel="stylesheet" type="text/css" href="./css/home.css"/>
 		<div class="header" data-role="header">
 			<img src="./images/logo.png"/>
 		</div>
@@ -38,3 +37,38 @@ If you open your index.html page you will now see the following:
 
 ![](https://github.com/eoghanfurlong/MVCinjQueryMobile/raw/v1/docs/TestView.png)
 
+## Step 4
+To give the home screen a customised appearance/style, open home.css (client/default/app/css) and add the following code:
+				
+		#menu{
+			list-style:none;
+			width:280px;
+			margin:20px auto;
+			clear:both;
+		}
+
+		#menu li{
+			float:left;
+			margin-top:20px;
+		}
+
+		#menu li div{
+			width:100px;
+			height:100px;
+		}
+
+		#menu li.spacer div{
+			width:60px;
+		}
+		#menu li div::after,#menu li div::before{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		-webkit-user-select: none;
+		-webkit-text-size-adjust: none;
+		-webkit-touch-callout: none;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+
+This css file then needs to be referenced, so add the following to the top of the home.html file:
+
+<link rel="stylesheet" type="text/css" href="./css/home.css"/>
