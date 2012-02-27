@@ -8,6 +8,7 @@ In this tutorial we will:
 
 ![](https://github.com/feedhenry/FH-Training-App-Sencha/raw/v2/docs/HomeView.png)
 
+
 ## Step 1
 In the home.css file in the css directory, add the following code:
 
@@ -21,10 +22,10 @@ In the home.css file in the css directory, add the following code:
 			background-size:100% 100%;
 		}
 
-This file will override the jQuery Mobile styles that are applied and style our icon as necessary.
+This file will override the jQuery Mobile styles that are applied and style our icons as necessary.
+
 
 ## Step 2
-
 In the home.html file in the views directory, add the following code to the content div:
 
 		<div>
@@ -42,7 +43,7 @@ In the home.html file in the views directory, add the following code to the cont
 
 This will add the Google Maps and Twitter icons to the home screen.
 
-Next, create a file called googleMap.html in client the views folder (client/default/app/views) and add the following code:
+Next, create a file called googleMap.html in client the views folder (client/default/app/views) and add the following code to create the Maps page:
 
 		<link rel="stylesheet"  type="text/css" href="./css/map.css"/>
 		<!-- Google Maps API -->
@@ -58,5 +59,11 @@ Next, create a file called googleMap.html in client the views folder (client/def
 		</div>
 		</div>
 
+
 ## Step 3
+Update the index.html page to add reference to the javascript file that we created.
+
+
+		<script type="text/javascript" src="./app/models/map.js"></script>
+
 
