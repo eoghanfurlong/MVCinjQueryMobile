@@ -14,10 +14,6 @@ function bindEvent(){
 		creditCardController.validateCard(type,num);
 	});
 	
-	//save setting click event
-	$("#settings #saveSetting").bind("click",function(){
-		settingsController.saveSettings();
-	});
 }
 
 
