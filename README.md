@@ -61,9 +61,9 @@ Next, create a file called googleMap.html in client the views folder (client/def
 
 
 ## Step 3
-Update the index.html page to add reference to the javascript file that we created.
+Update the index.html page to add reference to the Google Maps page that we created.
 
 
-		<script type="text/javascript" src="./app/models/map.js"></script>
+		<div data-add-back-btn="true" data-role="page" class="page" id="googleMap"></div>
 
 
