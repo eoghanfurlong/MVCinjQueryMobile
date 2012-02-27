@@ -9,7 +9,7 @@ For this part of the tutorial we will create a page with access to the camera. T
 
 
 ## Step 1
-First we need to create our handler for the Camera. This will be a function contained within nav.js in events (client/default/app/events). It will contain a call to the $fh.cam() API call. you can read mote about the camera API [here](http://docs.feedhenry.com/api-reference/camera/). The following code is used to create our camera handler.
+First we need to create our controller for the Camera. This will be a function contained within nav.js in controllers (client/default/app/controllers). It will contain a call to the $fh.cam() API call. you can read mote about the camera API [here](http://docs.feedhenry.com/api-reference/camera/). The following code is used to create our camera controller.
 
 		camera : function() {
 				$fh.cam({
