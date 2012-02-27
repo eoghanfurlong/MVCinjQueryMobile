@@ -133,5 +133,5 @@ Now we need to create a page for settings. This will be a form containing multip
 
 This page also needs to be referneced in the index.html page.
 
-		`<div data-add-back-btn="true" data-role="page" class="page" id="settings"></div>`
+		<div data-add-back-btn="true" data-role="page" class="page" id="settings"></div>
 
