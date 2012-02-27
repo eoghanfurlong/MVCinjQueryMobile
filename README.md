@@ -49,7 +49,7 @@ A new file, settings.js should be created in the controllers folder (client/defa
 
 
 ## Step 2
-A setting.js file must now be created in the models folder (client/default/app/models) and the following code used
+A settings.js file must now be created in the models folder (client/default/app/models) and the following code used
 
 		var settings = {
 			data : {},
