@@ -131,7 +131,7 @@ A handler must be added to the button on the Payment screen. To do this, add the
 
 
 ## Step 7
-To create custom styles for the Payment page, create a creditcard.css file in the css folder (client/default/app/css). Add the following code to this file.
+To create custom styles for the Payment page, create a creditcard.css file in the css folder (client/default/css). Add the following code to this file.
 
 		#creditcard .content{
 			padding:20px;
