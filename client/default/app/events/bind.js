@@ -7,7 +7,7 @@ function bindEvent(){
 		}
 	});
 	
-	//creditcar validate click event
+	//creditcard validate click event
 	$("#creditcard #validateCard").bind("click",function(){
 		var type=$("#cardType").val();
 		var num=$("#cardNum").val();
