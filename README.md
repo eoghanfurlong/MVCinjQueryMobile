@@ -9,7 +9,7 @@ For this part of the tutorial we will create a page with access to the camera. T
 
 
 ## Step 1
-
+First we need to create
 
 
 ## Step 2
