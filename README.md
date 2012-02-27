@@ -31,7 +31,7 @@ code to the body section:
 ## Step 3
 Open home.html (client/default/app/views/home.html) and add the following line within the div named "content":
 
-<p>Home Page</p>
+`<p>Home Page</p>`
 
 If you open your index.html page you will now see the following:
 
@@ -71,4 +71,4 @@ To give the home screen a customised appearance/style, open home.css (client/def
 
 This css file then needs to be referenced, so add the following to the top of the home.html file:
 
-<link rel="stylesheet" type="text/css" href="./css/home.css"/>
+`<link rel="stylesheet" type="text/css" href="./css/home.css"/>`
