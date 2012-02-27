@@ -23,7 +23,7 @@ and add the following code to it.
 
 
 ## Step 2
-We must now add a reference to the new home page in the container page (index.html). To do this, open the file and add the following
+We must now add a reference to the new home page in the container page (index.html). To do this, open the index.html file and add the following
 code to the body section:
 
 		<div data-role="page" class="page" id="home"></div>
@@ -31,7 +31,7 @@ code to the body section:
 ## Step 3
 Open home.html (client/default/app/views/home.html) and add the following line within the div named "content":
 
-`<p>Home Page</p>`
+`<p>Test View</p>`
 
 If you open your index.html page you will now see the following:
 
