@@ -239,3 +239,37 @@ To the body section add:
 To the models section add: 
 
 `<script type="text/javascript" src="./app/models/map.js"></script>`
+
+
+## Step 7
+A handler function will now need to be included to allow navigation to the map view. In the controllers folder (client/default/app/controllers), create a file called nav.js and add the following code:
+
+		var nav = {
+			map : function() {
+			changeView("googleMap");
+			mapController.renderMap();
+			}
+		}
+
+Again, this file will have to be referenced, so in index.html add the following to the controllers section:
+
+`<script type="text/javascript" src="./app/controllers/nav.js"></script>`
+
+
+## Extra Task
+In the 'main.js' file found in the cloud directory, find the following code snippet.
+
+		var MARKERS = {
+		  locations: [
+		    {
+		      lat: '52.245671',
+		      lon: '-7.080002'
+		    },
+		    {
+		      lat: '52.257861',
+		      lon: '-7.136993'
+		    }
+		  ]
+		};
+
+Change the longitude and latitude values and then view the map page. The markers on the page should now be located in a new position.
