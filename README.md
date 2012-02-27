@@ -28,13 +28,13 @@ Create a file called googleMap.html in the views folder (client/default/app/view
 
 
 ## Step 2
-Update the index.html page to add a reference to the Google Maps page that we created. Examine the code and comments to see how it works.
+Update the index.html page to add a reference to the Google Maps page that we created.
 		
 		<div data-add-back-btn="true" data-role="page" class="page" id="googleMap"></div>
 
 
 ## Step 3
-In the models folder (client/default/app/models), create a map.js file and add the following code:
+In the models folder (client/default/app/models), create a map.js file and add the following code. Examine the code and comments to see how it works.
 
 		var mapModel = {
 			data : null,
@@ -77,7 +77,6 @@ In the models folder (client/default/app/models), create a map.js file and add t
 				});
 			}
 		}
-
 
 
 
@@ -235,8 +234,8 @@ Update the references to these new files in the index.html page so that jQuery M
 
 To the body section add:
 
-<div data-add-back-btn="true" data-role="page" class="page" id="googleMap"></div>
+`<div data-add-back-btn="true" data-role="page" class="page" id="googleMap"></div>`
 
 To the models section add: 
 
-<script type="text/javascript" src="./app/models/map.js"></script>
+`<script type="text/javascript" src="./app/models/map.js"></script>`
