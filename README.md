@@ -110,7 +110,7 @@ A handler function will now need to be included to allow navigation to the Twitt
 
 
 ## Step 6
-To create custom styles fot the Twitter page, create a tweet.css file in the css folder (client/default/app/css). Add the following code to this file.
+To create custom styles for the Twitter page, create a tweet.css file in the css folder (client/default/app/css). Add the following code to this file.
 
 		#tweets {
 			list-style: none;
@@ -140,6 +140,6 @@ This stylesheet then needs to be referenced in the Twitter page. Add the followi
 
 `<link rel="stylesheet" type="text/css" href="./css/tweet.css"/>`
 
-![](https://github.com/feedhenry/FH-Training-App-Sencha/raw/v4/docs/tweets.png
+![](https://github.com/feedhenry/FH-Training-App-Sencha/raw/v4/docs/tweets.png)
 
 
