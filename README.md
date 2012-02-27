@@ -5,7 +5,7 @@ In this tutorial we will be creating the basic structure of the app. At the end 
 
 * Add a new page to the container page with some UI components (app/views/home.html)
 
-![]https://github.com/eoghanfurlong/MVCinjQueryMobile/raw/v1/docs/HomeView.png
+![](https://github.com/eoghanfurlong/MVCinjQueryMobile/raw/v1/docs/HomeView.png)
 
 ## Step 1
 Given the boilerplate code, we need to create a home page for the app. Create a home.html file in client/default/app/views
@@ -36,5 +36,5 @@ Open home.html (client/default/app/views/home.html) and add the following line w
 
 If you open your index.html page you will now see the following:
 
-![]https://github.com/eoghanfurlong/MVCinjQueryMobile/raw/v1/docs/TestView.png
+![](https://github.com/eoghanfurlong/MVCinjQueryMobile/raw/v1/docs/TestView.png)
 
