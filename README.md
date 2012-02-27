@@ -83,7 +83,7 @@ To populate our list with tweets we add the following function to the main.js fi
 
 
 ## Step 5
-A handler function will now need to be included to allow navigation to the Twitter page. In the nav.js file in the controllers folder (client/default/app/controllers), add the folllowing code.
+A handler function will now need to be included to allow navigation to the Twitter page and to define how the information is displayed. In the nav.js file in the controllers folder (client/default/app/controllers), add the folllowing code.
 
 		twitter : function() {
 		$.mobile.showPageLoadingMsg()
@@ -110,9 +110,36 @@ A handler function will now need to be included to allow navigation to the Twitt
 
 
 ## Step 6
+To create custom styles fot the Twitter page, create a tweet.css file in the css folder (client/default/app/css). Add the following code to this file.
 
+		#tweets {
+			list-style: none;
+			margin: 0;
+			-webkit-padding-start: 0px;
+		}
+		#tweets li {
+			padding-bottom: 6px;
+			margin-bottom: 6px;
+			border-bottom: 1px solid #ccc;
+			padding-left: 15px;
+			padding-right: 15px;
+			clear: both;
+			min-height: 50px;
+		}
+		#tweets img {
+			float: left;
+			margin-right: 10px;
+		}
+		#tweets p {
+			line-height: 1.4em;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+		}
 
-## Step 7
+This stylesheet then needs to be referenced in the Twitter page. Add the following to the top of the twitter.html file.
 
+`<link rel="stylesheet" type="text/css" href="./css/tweet.css"/>`
+
+![](https://github.com/feedhenry/FH-Training-App-Sencha/raw/v4/docs/tweets.png
 
 
