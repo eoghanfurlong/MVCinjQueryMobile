@@ -9,10 +9,43 @@ For this part of the tutorial we will create a page with access to the camera. T
 
 
 ## Step 1
-First we need to create
+First we need to create our handler for the Camera. This will be a function contained within nav.js in events (client/default/app/events). It will contain a call to the $fh.cam() API call. you can read mote about the camera API [here](http://docs.feedhenry.com/api-reference/camera/). The following code is used to create our camera handler.
+
+		camera : function() {
+				$fh.cam({
+					act : 'picture',
+					uri : true
+				}, function(res) {
+					if(res.uri) {
+						// Store the filepath to the image
+						var pathToImage = res.uri;
+
+						// Change the view
+						changeView("camera");
+						// Update the view
+						$("#camera .content img").attr("src", pathToImage);
+					}
+				});
+		},
+
 
 
 ## Step 2
+Now we need to create the page that will be populated with our captured image. It should have the same basic structure as previous pages.
+
+		<div  class="header" data-role="header">
+			<img src="./images/logo.png"/>
+		</div>
+		<div class="content">
+			<img />
+		</div>
+
+
+## Step 3
+Now that we have our code completed we need to update index.html to include our new files. Add the following line under the body tag.
+
+	`<div data-add-back-btn="true" data-role="page" class="page" id="camera"></div>`
+
 
 
 
