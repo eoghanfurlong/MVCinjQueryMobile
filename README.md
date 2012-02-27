@@ -28,7 +28,7 @@ code to the body section:
 		<div data-role="page" class="page" id="home"></div>
 
 ## Step 3
-Open home.html (client/default/app/views/home.html) and add the following code within the div named "content":
+Open home.html (client/default/app/views/home.html) and add the following line within the div named "content":
 
-'<p>Home Page</p>'
+<p>Home Page</p>
 
