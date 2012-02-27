@@ -21,5 +21,3 @@ The code below is used to initialize the webview by clicking on the web icon and
 		},
 
 
-## Step 2
-
