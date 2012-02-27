@@ -23,7 +23,11 @@ To create the Twitter page in the app, go to the views folder (client/default/ap
 			</div>
 		</div>
 
+
 ## Step 2
+Update the index.html page to add a reference to the Twitter page that we created.
+
+`<div data-add-back-btn="true" data-role="page" class="page" id="twitter"></div>`
 
 
 ## Step 3
