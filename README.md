@@ -79,7 +79,6 @@ In the models folder (client/default/app/models), create a map.js file and add t
 		}
 
 
-
 ## Step 4
 In the controllers directory create a new file called 'map.js' with the following code. This file contains code that controls the map
 functionality. This uses some of the FeedHenry APIs such as 'fh.data' for loading stored map points from local storage. Examine this 
