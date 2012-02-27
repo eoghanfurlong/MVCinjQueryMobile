@@ -6,6 +6,9 @@ In this tutorial we will add a new page for the Google Maps page. You will learn
 * Integrate an app with the Google Maps API
 * Learn to use FeedHenry APIs
 
+![](https://github.com/feedhenry/FH-Training-App-Sencha/raw/v3/docs/MapView.png)
+
+
 ## Step 1
 Create a file called googleMap.html in the views folder (client/default/app/views) and add the following code to create the Maps page:
 
@@ -28,6 +31,7 @@ Create a file called googleMap.html in the views folder (client/default/app/view
 Update the index.html page to add a reference to the Google Maps page that we created:
 		
 		<div data-add-back-btn="true" data-role="page" class="page" id="googleMap"></div>
+
 
 ## Step 3
 
