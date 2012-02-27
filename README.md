@@ -3,7 +3,8 @@
 ## Overview
 In this tutorial we will be creating the basic structure of the app. At the end of this tutorial you will know how to:
 
-* Add a new page to the container page with some UI components (app/views/home.html)
+* Add a new page to the container page (app/views/home.html)
+* Use CSS to style jQuery Mobile components
 
 ![](https://github.com/eoghanfurlong/MVCinjQueryMobile/raw/v1/docs/HomeView.png)
 
