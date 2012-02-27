@@ -30,5 +30,5 @@ code to the body section:
 ## Step 3
 Open home.html (client/default/app/views/home.html) and add the following code within the div named "content":
 
-<span><p>Home Page</p></span>
+'<p>Home Page</p>'
 
