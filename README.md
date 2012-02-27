@@ -34,6 +34,8 @@ Update the index.html page to add a reference to the Google Maps page that we cr
 
 
 ## Step 3
-
+In the controllers directory create a new file called 'map.js' with the following code. This file contains code that controls the map
+functionality. This uses some of the FeedHenry APIs such as 'fh.data' for loading stored map points from local storage. Examine this 
+file closely and read the API information [here](http://docs.feedhenry.com/api-reference/)
 
 
