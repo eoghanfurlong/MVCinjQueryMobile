@@ -7,17 +7,5 @@ function bindEvent(){
 		}
 	});
 	
-	//creditcar validate click event
-	$("#creditcard #validateCard").bind("click",function(){
-		var type=$("#cardType").val();
-		var num=$("#cardNum").val();
-		creditCardController.validateCard(type,num);
-	});
-	
-	//save setting click event
-	$("#settings #saveSetting").bind("click",function(){
-		settingsController.saveSettings();
-	});
 }
-
 

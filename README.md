@@ -44,4 +44,19 @@ In the home.html file in the views directory, add the following code to the cont
 This will add the Google Maps and Twitter icons to the home screen.
 
 
+# Step 3
+To add a handler for button clicks on the home page, create a bind.js file in the events folder (client/default/apps/events) and paste in the following code.
+
+		function bindEvent(){
+			//homepage menu click event
+			$("#menu li").bind("click",function(){
+				var id=$(this).attr("id");
+				if (id!=undefined){
+					nav[id]();
+				}
+			});
+			
+		}
+
+
 
