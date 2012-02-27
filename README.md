@@ -31,3 +31,88 @@ Update the index.html page to add a reference to the Twitter page that we create
 
 
 ## Step 3
+Ìn the models folder (client/default/app/models) create a tweets.js file and add the following code. Examine this code to see how it works.
+
+		var tweets={
+			data:[],
+			load:function(callback){
+				var that=this;
+				$fh.act({
+					"act":"getTweets",
+					"secure":false
+				},function(res){
+					
+					if (res && res.data){
+						that.data=res.data;
+						if (callback){
+							callback(res.data);
+						}
+					}
+				})
+			},
+			getData:function(callback){
+				if (this.data===[]){
+					this.load(callback);
+				}else{
+					if (callback){
+						callback(this.data);
+					}
+				}
+			}
+		}
+
+
+## Step 4
+To populate our list with tweets we add the following function to the main.js file in our cloud directory. It will be invoked to populate the list automatically due to its proxy.
+
+		/*
+		 * Twitter
+		 */
+		function getTweets() {
+		  var username   = 'feedhenry';
+		  var num_tweets = 10;
+		  var url        = 'http://search.twitter.com/search.json?q=' + username;
+
+		  var response = $fh.web({
+		    url: url,
+		    method: 'GET',
+		    allowSelfSignedCert: true
+		  });
+		  return {'data': $fh.parse(response.body).results};
+		}
+
+
+## Step 5
+A handler function will now need to be included to allow navigation to the Twitter page. In the nav.js file in the controllers folder (client/default/app/controllers), add the folllowing code.
+
+		twitter : function() {
+		$.mobile.showPageLoadingMsg()
+		tweets.load(function(data) {
+			var tpl = '<img src="{0}"/><p>{1}</p>';
+			var html = ""
+			for(var i = 0; i < data.length; i++) {
+				var d = data[i];
+				//single data instance
+				var profileUrl = d['profile_image_url'];
+				var user = d['from_user'];
+				var text = d['text'];
+				html += "<li>";
+				html += tpl.replace("{0}", profileUrl).replace("{1}", user + text);
+				html += "</li>";
+
+			}
+			$("#twitter #tweets").html(html);
+			$.mobile.hidePageLoadingMsg();
+			changeView("twitter");
+
+		});
+	}
+
+
+## Step 6
+
+
+## Step 7
+
+
+
